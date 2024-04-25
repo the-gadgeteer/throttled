@@ -55,8 +55,8 @@ echo "Building virtualenv"
 cd "$INSTALL_DIR"
 /usr/bin/python3 -m venv venv
 . venv/bin/activate
-pip install wheel
-pip install -r requirements.txt
+python3 -m pip install wheel
+python3 -m pip install -r requirements.txt
 
 if [ "$INIT" = "systemd" ]; then
     echo "Enabling and starting systemd service"
